@@ -1,0 +1,91 @@
+<html lang="zh-cmn-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <title>在浏览器打开</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .weixin-tip {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            filter: alpha(opacity=80);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .weixin-tip p {
+            text-align: center;
+            margin-top: 10%;
+            padding: 0 5%;
+        }
+    </style>
+</head>
+
+<div class="weixin-tip">
+    <p>
+        <img src="live_weixin.png" alt="右上角打开"/>
+    </p>
+</div>
+
+<script language="javascript" type="text/javascript">
+
+
+    function is_weixn() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    function is_qq() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/(QQ)/i)) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+
+    function is_qq() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/(QQ)/i)) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    if (is_weixn() || (is_qq())) {
+        $(".weixin-tip").css("height", winHeight);
+        $(".weixin-tip").show();
+    } else {
+        window.location.href = "http://stoneifish.me/xpvideo/";
+    }
+
+
+</script>
+
+</body>
+</html>
